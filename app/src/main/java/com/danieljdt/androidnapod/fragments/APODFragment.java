@@ -165,7 +165,7 @@ public class APODFragment extends Fragment implements NasaAPODListener.OnPostAPO
 
     public void setPictureDate() {
         GregorianCalendar calendar = new GregorianCalendar();
-        calendar.add(GregorianCalendar.DAY_OF_YEAR, -(getArguments().getInt(ARG_SECTION_NUMBER)) - 1);
+        calendar.add(GregorianCalendar.DAY_OF_YEAR, -(getArguments().getInt(ARG_SECTION_NUMBER)) + 1);
         pictureDate = calendar;
     }
 
