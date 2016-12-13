@@ -36,10 +36,9 @@ public class NasaAPODListener implements RequestListener<Picture> {
             } catch (ClassCastException e) {
                 throw new ClassCastException(" must implement OnHeadlineSelectedListener");
             }
-            //Toast.makeText(context,"Request Success " + picture.getTitle() , Toast.LENGTH_LONG).show();
             requestInteractionListener.onPostAPODRequestInteraction(picture);
         } else {
-            Toast.makeText(context, "Request Success??", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Picture not found", Toast.LENGTH_SHORT).show();
         }
     }
 
